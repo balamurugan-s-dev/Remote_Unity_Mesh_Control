@@ -5,6 +5,7 @@ function App() {
   const [xRotation, setXRotation] = useState(0);
   const [yRotation, setYRotation] = useState(0);
   const [zRotation, setZRotation] = useState(0);
+  const [lightIntensity, setLightIntensity] = useState(0);
 
   useEffect(() => {
     socketRef.current = new WebSocket("ws://10.120.5.124:3000");
@@ -56,6 +57,18 @@ function App() {
     });
   }
 
+  const handleLight = (e) => {
+    const val = parseFloat(e.target.value);
+    setLightIntensity(val);
+    SendCommand({
+      target: "PlayerSphere",
+      type: "material",
+      property: "emission",
+      axis: "z",
+      axisValue: val
+    });
+  }  
+
   return (
     <div style={{
       display: 'flex',
@@ -64,8 +77,8 @@ function App() {
       alignItems: 'center',
       height: '100vh',
     }}>
-      <div style={{display: 'flex', flexDirection: 'column', gap: '10px'}}>
-        <div style={{marginBottom: '20px'}}><h2>Rotation Controls:</h2></div>
+      <div style={{display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '20px'}}>
+        <div style={{marginBottom: '5px'}}><h2>Rotation Controls:</h2></div>
 
         <div style={{display: 'flex', flexDirection: 'column', width: "300px",gap: '5px'}}>
           <label htmlFor="">Cube Rotation X: {xRotation}</label>
@@ -100,6 +113,21 @@ function App() {
             value={zRotation}
             style={{ width: "300" }}
             onChange={handleZRotation}
+          />
+        </div>
+      </div>
+
+      <div style={{display: 'flex', flexDirection: 'column', gap: '10px'}}>
+        <div style={{marginBottom: '5px'}}><h2>Emission Controls:</h2></div>
+        <div style={{display: 'flex', flexDirection: 'column', width: "300px",gap: '5px'}}>
+          <label htmlFor="">Emission Intensity: {lightIntensity}</label>
+          <input
+            type="range"
+            min="0"
+            max="1000"
+            value={lightIntensity}
+            style={{ width: "300" }}
+            onChange={handleLight}
           />
         </div>
       </div>
