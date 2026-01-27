@@ -12,7 +12,9 @@ This project demonstrates a full-stack real-time communication pipeline between 
 <br>
 
 ### 🎥 Video Reference
-[**▶️ Click here to watch the full demo video**](./ReadmeFiles/remoteMake.mp4)
+<!-- [**▶️ Click here to watch the full demo video**](./ReadmeFiles/remoteMake.mp4) -->
+<video src="https://github.com/user-attachments/assets/24f50cac-5d0b-4b2b-8bf9-ff389ba99138" controls="controls" style="max-width: 600px;">
+</video>
 ---
 
 ## 🚀 Features
