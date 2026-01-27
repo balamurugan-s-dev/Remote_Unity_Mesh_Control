@@ -9,6 +9,10 @@ This project demonstrates a full-stack real-time communication pipeline between 
 | <img src="./ReadmeFiles/ReactView.png" width="400"> | <img src="./ReadmeFiles/UnityView.png" width="400"> |
 | *Controls X, Y, Z rotation values* | *Updates rotation in real-time* |
 
+<br>
+
+### 🎥 Video Reference
+[**▶️ Click here to watch the full demo video**](./ReadmeFiles/remoteMake.mp4)
 ---
 
 ## 🚀 Features
