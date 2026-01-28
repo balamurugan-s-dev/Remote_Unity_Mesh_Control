@@ -130,6 +130,11 @@ function App() {
             onChange={handleLight}
           />
         </div>
+
+        <div>
+          <label htmlFor="">Emission Color: </label>
+          <input type="text" />
+        </div>
       </div>
     </div>
   );
