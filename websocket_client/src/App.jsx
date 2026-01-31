@@ -134,6 +134,9 @@ function App() {
         <div>
           <label htmlFor="">Emission Color: </label>
           <input type="text" />
+          <button>red</button>
+          <button>blue</button>
+          <button>green</button>
         </div>
       </div>
     </div>
